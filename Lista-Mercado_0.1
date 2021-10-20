@@ -1,0 +1,45 @@
+lista = [] 
+
+print("Adicione quantos itens quiser a lista. Quanto quiser parar, digite (1).")
+while True:
+    string = str(input())
+    
+
+    if string == "1":
+        print(lista)
+        print("\n------------------------------------------------------------------------")
+        print("Digite (1) para continuar adicionando items; \nDigite (2) para excluir algum item; \nDigite (3) para encerrar;")
+        print("------------------------------------------------------------------------")
+        A = int(input())
+        if A==1:
+            print("")
+        elif A==2:
+            print("Deseja excluir por posição ou pelo nome?")
+            print("Digite (1) para posição e (2) para excluir pelo nome")
+            print("------------------------------------------------------------------------")
+            C = int(input())
+            if C == 1:
+             print(lista)
+             print("Qual a posição do item que você deseja excluir?")
+             print("------------------------------------------------------------------------")
+             B = int(input())-1
+             del(lista[B])
+             print(lista)
+             print("------------------------------------------------------------------------")
+            elif C ==2:
+                print(lista)
+                print("Que item você deseja excluir?")
+                print("------------------------------------------------------------------------")
+                itemExclusao = str(input())
+                if itemExclusao in lista:
+                    lista.remove(itemExclusao)
+                    print(lista)
+                    print("------------------------------------------------------------------------")
+                else:
+                    print("Este item não pertence a lista.")
+                    print("------------------------------------------------------------------------")
+        elif A==3:
+            break
+    else:
+        lista.append(string)
+        print(lista)
