@@ -1,39 +1,39 @@
-lista = [] 
+listaMercado = [] 
 
 print("Adicione quantos itens quiser a lista. Quanto quiser parar, digite (1).")
 while True:
-    string = str(input())
+    itemMercado = str(input())
     
-
-    if string == "1":
-        print(lista)
+    if itemMercado == "1":
+        print(listaMercado)
         print("\n------------------------------------------------------------------------")
         print("Digite (1) para continuar adicionando items; \nDigite (2) para excluir algum item; \nDigite (3) para encerrar;")
         print("------------------------------------------------------------------------")
         A = int(input())
+
         if A==1:
             print("")
         elif A==2:
             print("Deseja excluir por posição ou pelo nome?")
             print("Digite (1) para posição e (2) para excluir pelo nome")
             print("------------------------------------------------------------------------")
-            C = int(input())
-            if C == 1:
-             print(lista)
+            acaoUsuario = int(input())
+            if acaoUsuario == 1:
+             print(listaMercado)
              print("Qual a posição do item que você deseja excluir?")
              print("------------------------------------------------------------------------")
-             B = int(input())-1
-             del(lista[B])
-             print(lista)
+             posicaoItem = int(input())-1
+             del(listaMercado[posicaoItem])
+             print(listaMercado)
              print("------------------------------------------------------------------------")
-            elif C ==2:
-                print(lista)
+            elif acaoUsuario ==2:
+                print(listaMercado)
                 print("Que item você deseja excluir?")
                 print("------------------------------------------------------------------------")
                 itemExclusao = str(input())
-                if itemExclusao in lista:
-                    lista.remove(itemExclusao)
-                    print(lista)
+                if itemExclusao in listaMercado:
+                    listaMercado.remove(itemExclusao)
+                    print(listaMercado)
                     print("------------------------------------------------------------------------")
                 else:
                     print("Este item não pertence a lista.")
@@ -41,5 +41,5 @@ while True:
         elif A==3:
             break
     else:
-        lista.append(string)
-        print(lista)
+        listaMercado.append(itemMercado)
+        print(listaMercado)
